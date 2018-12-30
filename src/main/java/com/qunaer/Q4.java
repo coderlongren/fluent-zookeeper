@@ -45,11 +45,9 @@ public class Q4 {
                 writer.write(bookInfo + "\n");
                 writer.newLine();
                 writer.flush();
-                System.out.println(bookInfo + "\n");
-                Thread.sleep(1000);
-                if (count > 200) {
-                    break;
-                }
+                Thread.sleep(4000);
+                System.out.println(count + bookInfo);
+
             }
 
 

@@ -10,6 +10,9 @@
  */
 package com.coderlong;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 〈一句话功能简述〉<br> 
  * 〈〉
@@ -21,7 +24,11 @@ package com.coderlong;
 public class TestDate {
     public static void main(String[] args) {
         try {
-            Thread.sleep(5 * 1000);
+            Queue<Integer> queue = new LinkedList<>();
+            queue.offer(1);
+            queue.offer(2);
+            ((LinkedList<Integer>) queue).remove(0);
+            System.out.println(queue.peek());
 
         } catch (Exception e) {
             System.out.println(e.getStackTrace());

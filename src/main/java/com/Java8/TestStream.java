@@ -37,8 +37,10 @@ public class TestStream {
 //        System.out.println(max);
         Predicate<Integer> test = x -> x > 2;
         Supplier<Integer> supplier = () -> {
-            return 1;
+          return 1;
         };
+        System.out.println(supplier.get());
+
 
         // 使用Reduce实现Count方法
         int cou = Stream.of(1,2,3,4).reduce(0, (a, b) -> a + b);

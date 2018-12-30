@@ -36,6 +36,7 @@ public class Lambda {
         System.out.println(addAction.apply(1,2));
         Predicate<Integer> testNum = x -> x > 5;
         System.out.println(testNum.test(6));
+        System.out.println(testNum.and(x -> x < 15).test(20));
 
         Predicate<Integer> big5 = x -> x > 2;
 

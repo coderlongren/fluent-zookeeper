@@ -13,6 +13,9 @@ package com.Java8;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 /**
@@ -31,10 +34,25 @@ public class TestDataStream {
         Artist a2 = new Artist("b", null, "");
         list.add(a1);
         list.add(a2);
-        List<String> res = list.stream().map(artist -> artist.getName()).collect(Collectors.toList());
-        for (String name : res) {
-            System.out.println(name);
-        }
+        List<Artist> list2 = new ArrayList<>();
+        Artist b1 = new Artist("c", null, "");
+        Artist b2 = new Artist("d", null, "");
+        list2.add(b1);
+        list2.add(b2);
+        List<List<Artist>> artists = new ArrayList<>();
+        artists.add(list);
+        artists.add(list2);
+        List<Artist> streamArtists = artists.stream().flatMap(Artist -> Artist.stream()).collect(Collectors.toList());
+
+        streamArtists.stream().forEach(item -> System.out.println(item.name));
+        Semaphore
+
+
+//        List<String> res = list.stream().map(artist -> artist.getName()).collect(Collectors.toList());
+
+//        for (String name : res) {
+//            System.out.println(name);
+//        }
 
     }
 

@@ -11,6 +11,8 @@
 package com.Java8;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * 〈创作音乐的个人或团体〉<br>

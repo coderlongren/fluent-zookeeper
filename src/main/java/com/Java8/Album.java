@@ -11,7 +11,6 @@
 package com.Java8;
 
 import java.util.List;
-
 /**
  * 〈一句话功能简述〉<br> 
  * 〈〉
@@ -20,6 +19,7 @@ import java.util.List;
  * @create 2018/11/2
  * @since 1.0.0
  */
+
 public class Album {
     public String name;
     public List<Track> tracks;
